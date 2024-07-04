@@ -1,0 +1,148 @@
+*:before, *, *:after
+{
+  box-sizing: border-box;
+}
+
+body
+{
+  position: relative;
+  margin: 0;
+  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+/*
+  * * *  * * *  * * *
+
+  Layout
+
+  * * *  * * *  * * *
+ */
+.container
+{
+  position: relative;
+  min-width: 372px;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 12px;
+  border-right: 1px solid #D8C4B6;
+  border-left: 1px solid #D8C4B6;
+}
+.grid-container
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+.grid-lines
+{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid: 1fr/repeat(4, 1fr);
+}
+@media (min-width: 576px)
+{
+  .grid-lines { grid: 1fr/repeat(6, 1fr); }
+}
+@media (min-width: 768px)
+{
+  .grid-lines { grid: 1fr/repeat(8, 1fr); }
+}
+@media (min-width: 992px)
+{
+  .grid-lines { grid: 1fr/repeat(10, 1fr); }
+
+  .row
+  {
+    display: grid;
+    grid: 1fr/repeat(10, 1fr);
+  }
+
+  .grid-4 { grid-area: 1 / 1 / 2 / 4; }
+  .grid-8 { grid-area: 1 / 4 / 2 / 11; }
+
+}
+@media (min-width: 1200px)
+{
+  .grid-lines { grid: 1fr/repeat(12, 1fr); }
+
+  .row
+  {
+    display: grid;
+    grid: 1fr/repeat(12, 1fr);
+  }
+
+  .grid-4 { grid-area: 1 / 1 / 2 / 5; }
+  .grid-8 { grid-area: 1 / 5 / 2 / 13; }
+
+}
+
+.grid-line
+{
+  width: 1px;
+  border-right: 1px dashed #cad2c5;
+}
+
+
+/*
+  * * *  * * *  * * *
+
+  Components
+
+  * * *  * * *  * * *
+ */
+pre
+{
+  margin: 0;
+  padding: 6px 12px;
+  background-color: #dadfd8;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.4;
+  overflow: auto;
+}
+
+/*
+  * * *  * * *  * * *
+
+  Typography
+
+  * * *  * * *  * * *
+ */
+h1, h2
+{
+  font-weight: 600;
+}
+h1
+{
+  font-size: 2rem;
+}
+p
+{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.quote
+{
+  padding: 6px;
+  border-left: 4px solid #a999ba;
+  background-color: #f7f4fb;
+}
+.label
+{
+  background-color: #e3cced;
+}
+.label:nth-child(3n + 1)
+{
+  background-color: #cdd3ed;
+}
+.label:nth-child(3n + 2)
+{
+  background-color: #d6cbed;
+}
