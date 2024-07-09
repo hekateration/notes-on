@@ -1,4 +1,6 @@
-Study, make notes and sketches, and revisit them.
+Study and ideate.  
+Note and sketch.  
+Revisit and profit.
 
 ## Live at
 
