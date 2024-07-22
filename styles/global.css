@@ -162,7 +162,7 @@ pre
 
   * * *  * * *  * * *
  */
-h1, h2, h3
+h1, h2, h3, h4
 {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -178,7 +178,11 @@ h2
 }
 h3
 {
-  font-size: 1.4rem;
+  font-size: 1.42rem;
+}
+h4
+{
+  font-size: 1.24rem;
 }
 p
 {
@@ -189,7 +193,7 @@ p
 a
 {
   position: relative;
-  color: #4e4355;
+  color: #362a6f;
   text-decoration: none;
 }
 a:before
@@ -216,6 +220,11 @@ a:after
 a:hover:after
 {
   opacity: 1;
+}
+a.h3
+{
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .color-blue
@@ -250,4 +259,32 @@ a:hover:after
 .text-center
 {
   text-align: center;
+}
+.text-right
+{
+  text-align: right;
+}
+
+.text-muted
+{
+  color: #5d645e;
+}
+
+.code-muted
+{
+  color: #554d3d;
+}
+
+.ttg
+{
+  color: #4b5159;
+  letter-spacing: 1px;
+  font-size: .84rem;
+  font-weight: 600;
+  line-height: 1.54rem;
+  text-transform: uppercase;
+}
+.header .ttg
+{
+  margin-top: 3rem;
 }
